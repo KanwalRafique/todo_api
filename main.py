@@ -42,4 +42,9 @@ def delete(todo_id: int):
         if todo.id == todo_id:
             todos.pop(i)
             return {"message": "Todo deleted"}
+
     return {"message": "Todo not found"}
+
+@app.get("/")
+def root():
+    return {"message": "Welcome to Todo API!"}
